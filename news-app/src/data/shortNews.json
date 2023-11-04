@@ -1,0 +1,22 @@
+[
+        {
+                "category":"BUSINESS",
+                "date":"Jan 01 , 2005",
+                "description":"Check the data structure of ShortNews to ensure it's an array."
+        },
+        {
+                "category":"Sports",
+                "date":"Jan 01 , 2010",
+                "description":"Make sure it's properly initialized and contains"
+        },
+        {
+                "category":"Politics",
+                "date":"Jan 01 , 2020",
+                "description":"Ensure that the variable ShortNews is"
+        },
+        {
+                "category":"Nation",
+                "date":"Jan 01 , 2023",
+                "description":"If you can provide more context or c"
+        }
+]

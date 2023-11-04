@@ -1,0 +1,38 @@
+[
+        {
+                "date": "Jan 01 Ur, 2045",
+                "headline": "Lorem ipsum dolor sit amet elit...",
+                "description": "Dolor lorem eos dolor duo et eirmod sea. Dolor sit magnarebum clita rebum dolor stet amet justo",
+                "author_name": "John Doe",
+                "category": "Sports",
+                "views": 12345,
+                "comment":123
+        },
+        {
+                "date": "Jan 04 Ur, 2045",
+                "headline": "Lorem ipsum dolor sit amet elit...",
+                "description": "Dolor lorem eos dolor duo et eirmod sea. Dolor sit magnarebum clita rebum dolor stet amet justo",
+                "author_name": "John Doe",
+                "category": "Business",
+                "views": 12345,
+                "comment":123
+        },
+        {
+                "date": "Jan 07 Ur, 2045",
+                "headline": "Lorem ipsum dolor sit amet elit...",
+                "description": "Dolor lorem eos dolor duo et eirmod sea. Dolor sit magnarebum clita rebum dolor stet amet justo",
+                "author_name": "John Doe",
+                "category": "Finance",
+                "views": 12345,
+                "comment":123
+        },
+        {
+                "date": "Jan 12 Ur, 2045",
+                "headline": "Lorem ipsum dolor sit amet elit...",
+                "description": "Dolor lorem eos dolor duo et eirmod sea. Dolor sit magnarebum clita rebum dolor stet amet justo",
+                "author_name": "John Doe",
+                "category": "Entertainment",
+                "views": 12345,
+                "comment":123
+        }
+]
