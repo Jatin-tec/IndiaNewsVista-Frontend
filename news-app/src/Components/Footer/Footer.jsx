@@ -2,11 +2,13 @@ import React,{useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faFacebook, faTwitter, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import img1 from './img/news-110x110-1.jpg';
-import img2 from './img/news-110x110-2.jpg';
-import img3 from './img/news-110x110-3.jpg';
-import img4 from './img/news-110x110-4.jpg';
-import img5 from './img/news-110x110-5.jpg'
+
+import img1 from '../../Pages/img/news-110x110-1.jpg';
+import img2 from '../../Pages/img/news-110x110-2.jpg';
+import img3 from '../../Pages/img/news-110x110-3.jpg';
+import img4 from '../../Pages/img/news-110x110-4.jpg';
+import img5 from '../../Pages/img/news-110x110-5.jpg';
+
 function Footer() {
   return (
     <>

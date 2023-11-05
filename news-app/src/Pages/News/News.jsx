@@ -1,22 +1,27 @@
 import React , {useState} from 'react'
-import img1 from './img/news-700x435-1.jpg';
-import img5 from './img/news-700x435-5.jpg';
-import ad from './img/ads-728x90.png';
-import ad2 from './img/news-800x500-2.jpg';
-import img7 from './img/news-110x110-2.jpg';
-import img8 from './img/news-110x110-3.jpg';
-import user from './img/user.jpg';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLinkedin,faFacebook, faTwitter, faInstagram,faYoutube,faVimeo} from '@fortawesome/free-brands-svg-icons';
 import { faEye, faComment } from '@fortawesome/free-regular-svg-icons';
-import NewsBlock from '../Components/NewsBlock/NewsBlock';
-import news from '../data/news.json'
-import shortNews from '../data/shortNews.json'
-import Follow from '../Components/Follow/Follow';
-import ShortNews from '../Components/ShortNews/ShortNews'
-import PopularNews from '../Components/PopularNews/PopularNews'
-import popular from '../data/popularNews.json';
-import Footer from './Footer';
+
+import img1 from '../../Pages/img/news-700x435-1.jpg';
+import img5 from '../../Pages/img/news-700x435-5.jpg';
+import ad from '../../Pages/img/ads-728x90.png';
+import ad2 from '../../Pages/img/news-800x500-2.jpg';
+import img7 from '../../Pages/img/news-110x110-2.jpg';
+import img8 from '../../Pages/img/news-110x110-3.jpg';
+import user from '../../Pages/img/user.jpg';
+
+import news from '../../data/news.json';
+import shortNews from '../../data/shortNews.json';
+import popular from '../../data/popularNews.json';
+
+import NewsBlock from '../../Components/NewsBlock/NewsBlock.jsx';
+import Follow from '../../Components/Follow/Follow.jsx';
+import ShortNews from '../../Components/ShortNews/ShortNews.jsx';
+import PopularNews from '../../Components/PopularNews/PopularNews.jsx';
+import Footer from '../../Components/Footer/Footer.jsx';
+
 function News() {
         const [isUnderlined,setIsUnderlined] = useState(false);
         const [isHeading, setIsHeadingUnderlined] = useState(false);
@@ -68,9 +73,9 @@ function News() {
             <div className="row">
                 <div className="col-lg-8">
                     <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 mt-4">
                             <div className="section-title mb-2 bg-warning p-3">
-                                <h4 className="m-0 text-uppercase font-weight-bold">Latest News</h4>
+                                <h4 className="m-0 text-uppercase font-weight-bold mt-2">Latest News</h4>
                                 
                             </div>
                         </div>
@@ -117,6 +122,7 @@ function News() {
                                             <img className="rounded-circle mr-2" src={user} width="25" height="25" alt=""/>
                                             <small className='px-2'>John Doe</small>
                                         </div>
+                                        
                                         <div className="d-flex align-items-center">
                                             <small className="ml-3 px-2"><FontAwesomeIcon className="far fa-eye mr-2 " icon={faEye}/> 1234</small>
                                             
@@ -137,7 +143,7 @@ function News() {
                 </div>
                 <div className="col-lg-4">
                         {/* Social Follow Start*/}
-                    <div className="mb-4">
+                    <div className="mb-4 mt-4">
                         <div className="section-title mb-0 bg-warning p-3">
                             <h4 className="m-0 text-uppercase font-weight-bold">Follow Us</h4>
                         </div>

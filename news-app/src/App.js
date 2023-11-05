@@ -1,20 +1,21 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Route and Routes
-import Category from './Pages/Category';
-import Contact from './Pages/Contact';
-import NavBar from './Pages/NavBar';
-import Slider from './Pages/Slider';
+import NavBar from './Components/Navbar/NavBar.jsx';
+import Category from './Pages/Category/Category.jsx';
+import Contact from './Pages/Contact/Contact.jsx';
+import SinglePage from './Pages/SingleNews/SingleNews.jsx';
+import News from './Pages/News/News.jsx';
 
 function App() {
   return (
-    <Router> {/* Wrap your Routes with Router */}
-      <>
+    <Router>
+      <NavBar/>
         <Routes>
-          <Route path="/" element={<NavBar />} />
-          <Route path="/about" element={<Category />} />
+          <Route path="/" element={<News/>} />
+          <Route path="/category/:category" element={<Category />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/singleNews" element={<SinglePage />} />
         </Routes>
-      </>
     </Router>
   );
 }

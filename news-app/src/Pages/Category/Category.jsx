@@ -1,24 +1,30 @@
-import React,{useState} from 'react'
+import React, {useState} from 'react';
+import { useParams } from 'react-router-dom';
 
-import img1 from './img/news-700x435-1.jpg';
-import img5 from './img/news-700x435-5.jpg';
-import ad from './img/ads-728x90.png';
-import ad2 from './img/news-800x500-2.jpg';
-import img7 from './img/news-110x110-2.jpg';
-import img8 from './img/news-110x110-3.jpg';
-import user from './img/user.jpg';
-import NewsBlock from '../Components/NewsBlock/NewsBlock';
-import news from '../data/news.json'
-import shortNews from '../data/shortNews.json'
-import Follow from '../Components/Follow/Follow';
-import ShortNews from '../Components/ShortNews/ShortNews'
-import PopularNews from '../Components/PopularNews/PopularNews'
-import popular from '../data/popularNews.json';
-import Footer from './Footer';
+import img1 from '../img/news-700x435-1.jpg';
+import img5 from '../img/news-700x435-5.jpg';
+import ad from '../img/ads-728x90.png';
+import ad2 from '../img/news-800x500-2.jpg';
+import img7 from '../img/news-110x110-2.jpg';
+import img8 from '../img/news-110x110-3.jpg';
+import user from '../img/user.jpg';
+
+import NewsBlock from '../../Components/NewsBlock/NewsBlock';
+import Follow from '../../Components/Follow/Follow';
+import ShortNews from '../../Components/ShortNews/ShortNews';
+import PopularNews from '../../Components/PopularNews/PopularNews';
+import Footer from '../../Components/Footer/Footer';
+
+import news from '../../data/news.json';
+import shortNews from '../../data/shortNews.json'
+import popular from '../../data/popularNews.json';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLinkedin,faFacebook, faTwitter, faInstagram,faYoutube,faVimeo} from '@fortawesome/free-brands-svg-icons';
 import { faEye, faComment } from '@fortawesome/free-regular-svg-icons';
+
 function Category() {
+        const { category } = useParams();
         const [isUnderlined,setIsUnderlined] = useState(false);
         const [isHeading, setIsHeadingUnderlined] = useState(false);
         const [isDescriptionUnderlined, setIsDescriptionUnderlined] = useState(false);
@@ -70,7 +76,7 @@ function Category() {
                     <div className="row">
                         <div className="col-12">
                             <div className="section-title mb-2 bg-warning p-3 btn-lg-square">
-                                <h4 className="m-0 text-uppercase font-weight-bold">CATEGORY: BUSINESS</h4>
+                                <h4 className="m-0 text-uppercase font-weight-bold">CATEGORY: {category}</h4>
                                 
                             </div>
                         </div>

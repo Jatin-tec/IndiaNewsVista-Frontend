@@ -1,8 +1,10 @@
 import React from 'react'
 import './navBar.css'
-import img1 from './img/ads-728x90.png'
+import img1 from '../../Pages/img/ads-728x90.png';
 import { Link, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import category from '../../data/category.json';
+
 function NavBar() {
   return (
     <>
@@ -13,16 +15,16 @@ function NavBar() {
                 <nav className="navbar navbar-expand-sm text-light  p-0">
                     <ul className="navbar-nav ml-n2">
                         <li className="nav-item border-right border-secondary">
-                            <Link className="nav-link text-body text-light small" href="/">Monday, January 1, 2045</Link>
+                            <Link className="nav-link text-body text-light small" to="/">Monday, January 1, 2045</Link>
                         </li>
                         <li className="nav-item border-right border-secondary">
-                            <Link className="nav-link text-body small" href="/">Advertise</Link>
+                            <Link className="nav-link text-body small" to="/">Advertise</Link>
                         </li>
                         <li className="nav-item border-right border-secondary">
-                            <Link className="nav-link text-body small" href="/">Contact</Link>
+                            <Link className="nav-link text-body small" to="/">Contact</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-body small" href="/">Login</Link>
+                            <Link className="nav-link text-body small" to="/">Login</Link>
                         </li>
                     </ul>
                 </nav>
@@ -31,22 +33,22 @@ function NavBar() {
                 <nav className="navbar navbar-expand-sm bg-dark p-0">
                     <ul className="navbar-nav ml-auto mr-n2">
                         <li className="nav-item">
-                            <Link className="nav-link text-body" href="/"><small className="fab fa-twitter"></small></Link>
+                            <Link className="nav-link text-body" to="/"><small className="fab fa-twitter"></small></Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-body" href="/"><small className="fab fa-facebook-f"></small></Link>
+                            <Link className="nav-link text-body" to="/"><small className="fab fa-facebook-f"></small></Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-body" href="/"><small className="fab fa-linkedin-in"></small></Link>
+                            <Link className="nav-link text-body" to="/"><small className="fab fa-linkedin-in"></small></Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-body" href="/"><small className="fab fa-instagram"></small></Link>
+                            <Link className="nav-link text-body" to="/"><small className="fab fa-instagram"></small></Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-body" href="/"><small className="fab fa-google-plus-g"></small></Link>
+                            <Link className="nav-link text-body" to="/"><small className="fab fa-google-plus-g"></small></Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-body" href="/"><small className="fab fa-youtube"></small></Link>
+                            <Link className="nav-link text-body" to="/"><small className="fab fa-youtube"></small></Link>
                         </li>
                     </ul>
                 </nav>
@@ -54,14 +56,14 @@ function NavBar() {
         </div>
         <div className="row align-items-center bg-white py-3 px-lg-5">
             <div className="col-lg-4">
-                <Link href="index.html" className="navbar-brand p-0 d-none d-lg-block">
+                <Link to="index.html" className="navbar-brand p-0 d-none d-lg-block">
                     <h1 className="m-0 display-4 text-uppercase text-primary">
                     <span className="text-warning font-weight-normal">Biz</span>
                         <span className="text-dark font-weight-normal">News</span></h1>
                 </Link>
             </div>
             <div className="col-lg-8 text-center text-lg-right">
-                <Link href="https://htmlcodex.com"><img className="img-fluid" src={img1} alt=""/></Link>
+                <Link to="https://htmlcodex.com"><img className="img-fluid" src={img1} alt=""/></Link>
             </div>
         </div>
     </div>
@@ -74,16 +76,29 @@ function NavBar() {
     <div className="collapse navbar-collapse " id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className="nav-link active text-light font-weight-bold px-4" aria-current="page"  href="/Home" style={{"font-size": "22px"}}>Home</Link>
+          <Link className="nav-link active text-light font-weight-bold px-4" aria-current="page"  to="/" style={{"fontSize": "22px"}}>Home</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-light font-weight-bold px-4" href="/Category" style={{"font-size": "22px"}}>Category</Link>
+          <div className="nav-link text-light font-weight-bold px-4 dropdown"  style={{"fontSize": "22px"}}>
+            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Category
+            </button>
+            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              {category && category.map((item, index) => {
+                return(
+                  <Link className="dropdown-item" key={index} to={`/category/${item.title}`}>{item.title}</Link>
+                )
+              })}
+            </div>
+          </div>
+          
+          
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-light font-weight-bold px-4" href="/" style={{"font-size": "22px"}}>Single News</Link>
+          <Link className="nav-link text-light font-weight-bold px-4" to="/singleNews" style={{"font-size": "22px"}}>Single News</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-light font-weight-bold px-4" href="/Contact" style={{"font-size": "22px"}}>Contact</Link>
+          <Link className="nav-link text-light font-weight-bold px-4" to="/contact" style={{"font-size": "22px"}}>Contact</Link>
         </li>
         
       </ul>

@@ -10,7 +10,6 @@ import img6 from './img/news-700x435-3.jpg';
 import img7 from './img/news-700x435-4.jpg';
 import img8 from './img/news-700x435-5.jpg';
 import News from './News';
-import BreakingNews from '../Pages/BreakingNews';
 
 const ImageCarousel = () => {
   const imageUrls = [img1, img2, img3, img4];
